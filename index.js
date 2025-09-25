@@ -231,7 +231,7 @@ function handleEvent(event) {
             "type": "bubble",
             "hero": {
               "type": "image",
-              "url": "https://example.com/project2.jpg", // <--- แก้ไข URL รูปภาพตรงนี้
+              "url": "https://example.com/project2.jpg",
               "size": "full",
               "aspectRatio": "20:13",
               "aspectMode": "cover"
@@ -264,7 +264,7 @@ function handleEvent(event) {
                 "action": {
                   "type": "uri",
                   "label": "ดูผลงาน",
-                  "uri": "https://example.com/project2" // <--- แก้ไข URL ตรงนี้
+                  "uri": "https://example.com/project2"
                 }
               }]
             }
@@ -429,67 +429,134 @@ function handleEvent(event) {
         type: 'text',
         text: 'ยังไม่มีรายละเอียดครับ แต่ถ้ามีผมจะให้คุณดูได้แน่นอนครับ'
       });
-    }
-
-    // --- ส่วนที่เพิ่มเข้ามาใหม่ ---
-    else if (userMessage === 'ตั๋วเครื่องบิน') {
-      const ticketOptions = {
-        type: 'text',
-        text: 'กรุณาเลือกเที่ยวบินที่ต้องการดูรายละเอียดครับ และพิมพ์ "ขาไป" หรือ "ขากลับ"',
-        quickReply: {
-          items: [{
-            type: 'action',
-            action: {
-              type: 'message',
-              label: '✈️ ตั๋วขาไป',
-              text: 'ขาไป'
+    } else if (userMessage === 'ตั๋วเครื่องบิน') {
+        const ticketOptions = {
+            type: 'text',
+            text: "กรุณาเลือกเที่ยวบินที่ต้องการดูรายละเอียด โดยพิมพ์ 'ตั๋วขาไป' หรือ 'ตั๋วขากลับ' ครับ",
+            quickReply: {
+                items: [{
+                    type: 'action',
+                    action: {
+                        type: 'message',
+                        label: '✈️ ตั๋วขาไป',
+                        text: 'ตั๋วขาไป'
+                    }
+                }, {
+                    type: 'action',
+                    action: {
+                        type: 'message',
+                        label: '✈️ ตั๋วขากลับ',
+                        text: 'ตั๋วขากลับ'
+                    }
+                }]
             }
-          }, {
-            type: 'action',
-            action: {
-              type: 'message',
-              label: '✈️ ตั๋วขากลับ',
-              text: 'ขากลับ'
-            }
-          }]
-        }
-      };
-      return client.replyMessage(event.replyToken, ticketOptions);
-
-    } else if (userMessage === 'ขาไป') {
-      // **สำคัญ:** เปลี่ยน URL รูปภาพให้เป็น URL ของตั๋วขาไปของคุณ
+        };
+        return client.replyMessage(event.replyToken, ticketOptions);
+    } else if (userMessage === 'ตั๋วขาไป') {
       const departureTicket = {
         type: 'image',
-        originalContentUrl: 'https://i.postimg.cc/Dz1ryTvP/edit.jpg', // <--- แก้ไข URL รูปภาพตรงนี้
-        previewImageUrl: 'https://i.postimg.cc/Dz1ryTvP/edit.jpg' // <--- แก้ไข URL รูปภาพตรงนี้
+        originalContentUrl: 'https://example.com/ticket_go.jpg',
+        previewImageUrl: 'https://example.com/ticket_go.jpg'
       };
       return client.replyMessage(event.replyToken, departureTicket);
-
-    } else if (userMessage === 'ขากลับ') {
-      // **สำคัญ:** เปลี่ยน URL รูปภาพให้เป็น URL ของตั๋วขากลับของคุณ
+    } else if (userMessage === 'ตั๋วขากลับ') {
       const returnTicket = {
         type: 'image',
-        originalContentUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg', // <--- แก้ไข URL รูปภาพตรงนี้
-        previewImageUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg' // <--- แก้ไข URL รูปภาพตรงนี้
+        originalContentUrl: 'https://example.com/ticket_back.jpg',
+        previewImageUrl: 'https://example.com/ticket_back.jpg'
       };
       return client.replyMessage(event.replyToken, returnTicket);
-      
     } else if (userMessage === 'ขอรายละเอียดที่พัก') {
-      const messages = [{
-        type: 'text',
-        text: 'นี่คือรายละเอียดที่พักครับ 🏨\n\nThe Quarter Ratchathewi by UHG\nคุณสามารถกดดูแผนที่ด้านล่างเพื่อนำทางได้เลยครับ'
-      }, {
-        type: 'location',
-        title: 'The Quarter Ratchathewi by UHG',
-        address: '128/8 Phetchaburi Rd, Thung Phaya Thai, Ratchathewi, Bangkok 10400',
-        latitude: 13.754868,
-        longitude: 100.531235
-      }];
-      return client.replyMessage(event.replyToken, messages);
-    }
-    // --- จบส่วนที่เพิ่มเข้ามาใหม่ ---
-    
-    else {
+      const accommodationMessages = [
+        {
+          type: 'flex',
+          altText: 'ข้อมูลที่พัก The Quarter Ratchathewi by UHG',
+          contents: {
+            "type": "bubble",
+            "hero": {
+              "type": "image",
+              "url": "https://content.traveloka.com/id/v2/upload/image/2024-03-21-09-53-12-8f1d88a1a457c1a70c36b3252a1293a3.jpeg", // Example image URL
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "The Quarter Ratchathewi by UHG",
+                  "weight": "bold",
+                  "size": "xl",
+                  "wrap": true
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "margin": "lg",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "ที่อยู่",
+                          "color": "#aaaaaa",
+                          "size": "sm",
+                          "flex": 1
+                        },
+                        {
+                          "type": "text",
+                          "text": "128/8 Phetchaburi Rd, Thung Phaya Thai, Ratchathewi, Bangkok 10400",
+                          "wrap": true,
+                          "color": "#666666",
+                          "size": "sm",
+                          "flex": 5
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "button",
+                  "style": "link",
+                  "height": "sm",
+                  "action": {
+                    "type": "uri",
+                    "label": "ดูรายละเอียดและจองที่พัก",
+                    "uri": "https://www.traveloka.com/en-th/hotel/thailand/the-quarter-ratchathewi-by-uhg-9000002437721"
+                  }
+                }
+              ],
+              "flex": 0
+            }
+          }
+        },
+        {
+          type: 'text',
+          text: 'คุณสามารถกดดูแผนที่ด้านล่างเพื่อนำทางได้เลยครับ'
+        },
+        {
+          type: 'location',
+          title: 'The Quarter Ratchathewi by UHG',
+          address: '128/8 Phetchaburi Rd, Thung Phaya Thai, Ratchathewi, Bangkok 10400',
+          latitude: 13.754868,
+          longitude: 100.531235
+        }
+      ];
+      return client.replyMessage(event.replyToken, accommodationMessages);
+    } else {
       return client.replyMessage(event.replyToken, {
         type: 'text',
         text: 'ยินดีต้อนรับครับ! คุณสามารถสำรวจข้อมูลของผมได้จากเมนู Rich Menu ด้านล่าง'
