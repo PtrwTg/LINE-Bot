@@ -455,15 +455,15 @@ function handleEvent(event) {
     } else if (userMessage === 'ตั๋วขาไป') {
       const departureTicket = {
         type: 'image',
-        originalContentUrl: 'https://example.com/ticket_go.jpg',
-        previewImageUrl: 'https://example.com/ticket_go.jpg'
+        originalContentUrl: 'https://i.postimg.cc/Dz1ryTvP/edit.jpg',
+        previewImageUrl: 'https://i.postimg.cc/Dz1ryTvP/edit.jpg'
       };
       return client.replyMessage(event.replyToken, departureTicket);
     } else if (userMessage === 'ตั๋วขากลับ') {
       const returnTicket = {
         type: 'image',
-        originalContentUrl: 'https://example.com/ticket_back.jpg',
-        previewImageUrl: 'https://example.com/ticket_back.jpg'
+        originalContentUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg',
+        previewImageUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg'
       };
       return client.replyMessage(event.replyToken, returnTicket);
     } else if (userMessage === 'ขอรายละเอียดที่พัก') {
