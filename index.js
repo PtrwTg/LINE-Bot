@@ -443,7 +443,7 @@ function handleEvent(event) {
         previewImageUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg'
       };
       return client.replyMessage(event.replyToken, returnTicket);
-    } else if (userMessage === 'ที่พัก') { // <--- เปลี่ยนตรงนี้เรียบร้อยครับ 🎉
+    } else if (userMessage === 'ที่พัก') { 
       const accommodationMessages = [
         {
           type: 'flex',
