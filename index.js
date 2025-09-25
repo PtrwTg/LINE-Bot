@@ -466,7 +466,7 @@ function handleEvent(event) {
         previewImageUrl: 'https://i.postimg.cc/kMYbC4Nd/edit.jpg'
       };
       return client.replyMessage(event.replyToken, returnTicket);
-    } else if (userMessage === 'ขอรายละเอียดที่พัก') {
+    } else if (userMessage === 'ที่พัก') {
       const accommodationMessages = [
         {
           type: 'flex',
