@@ -432,31 +432,31 @@ function handleEvent(event) {
     }
 
     // --- ส่วนที่เพิ่มเข้ามาใหม่ ---
-    else if (userMessage === 'ขอรายละเอียดตั๋วเครื่องบิน') {
+    else if (userMessage === 'ตั๋วเครื่องบิน') {
       const ticketOptions = {
         type: 'text',
-        text: 'กรุณาเลือกเที่ยวบินที่ต้องการดูรายละเอียดครับ',
+        text: 'กรุณาเลือกเที่ยวบินที่ต้องการดูรายละเอียดครับ และพิมพ์ "ขาไป" หรือ "ขากลับ"',
         quickReply: {
           items: [{
             type: 'action',
             action: {
               type: 'message',
               label: '✈️ ตั๋วขาไป',
-              text: 'ตั๋วขาไป'
+              text: 'ขาไป'
             }
           }, {
             type: 'action',
             action: {
               type: 'message',
               label: '✈️ ตั๋วขากลับ',
-              text: 'ตั๋วขากลับ'
+              text: 'ขากลับ'
             }
           }]
         }
       };
       return client.replyMessage(event.replyToken, ticketOptions);
 
-    } else if (userMessage === 'ตั๋วขาไป') {
+    } else if (userMessage === 'ขาไป') {
       // **สำคัญ:** เปลี่ยน URL รูปภาพให้เป็น URL ของตั๋วขาไปของคุณ
       const departureTicket = {
         type: 'image',
@@ -465,7 +465,7 @@ function handleEvent(event) {
       };
       return client.replyMessage(event.replyToken, departureTicket);
 
-    } else if (userMessage === 'ตั๋วขากลับ') {
+    } else if (userMessage === 'ขากลับ') {
       // **สำคัญ:** เปลี่ยน URL รูปภาพให้เป็น URL ของตั๋วขากลับของคุณ
       const returnTicket = {
         type: 'image',
