@@ -512,7 +512,7 @@ function handleEvent(event) {
                     action: {
                         type: 'message',
                         // เพิ่มไอคอน ✈️ และปรับป้ายให้กระชับ
-                        label: '✈️ ตั๋วขาไป (พฤ. 6 ต.ค.)', 
+                        label: '✈️ ขาไป 6 ต.ค.', 
                         text: 'ตั๋วขาไป'
                     }
                 }, {
@@ -520,7 +520,7 @@ function handleEvent(event) {
                     action: {
                         type: 'message',
                         // เพิ่มไอคอน ✈️ และปรับป้ายให้กระชับ
-                        label: '✈️ ตั๋วขากลับ (ศ. 7 ต.ค.)', 
+                        label: '✈️ ขากลับ 7 ต.ค.', 
                         text: 'ตั๋วขากลับ'
                     }
                 }]
