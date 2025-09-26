@@ -497,7 +497,7 @@ function handleEvent(event) {
               "action": {
                 "type": "uri",
                 "label": "โอนเงิน & แนบสลิปที่นี่เลย 🥳",
-                "uri": "https://liff.line.me/[LIFF_ID_DONATE]" // *** เปลี่ยนเป็น LIFF ID ของคุณ ***
+                "uri": "https://liff.line.me/2008162847-GV9l2wmz" // *** เปลี่ยนเป็น LIFF ID ของคุณ ***
               }
             }]
           }
