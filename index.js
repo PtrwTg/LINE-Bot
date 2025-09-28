@@ -455,51 +455,6 @@ function handleEvent(event) {
             }, {
               "type": "separator",
               "margin": "lg"
-            }, {
-              "type": "box",
-              "layout": "vertical",
-              "margin": "lg",
-              "contents": [{
-                "type": "text",
-                "text": "✅ ข้อมูลการโอนเงิน",
-                "weight": "bold",
-                "margin": "none",
-                "size": "md"
-              }, {
-                "type": "text",
-                // **!!! กรุณาแก้ไข: ชื่อธนาคารของคุณ !!!**
-                "text": "ธนาคาร: [ชื่อธนาคาร] (กรุณาแก้ไข)", 
-                "margin": "md",
-                "size": "sm",
-                "color": "#333333"
-              }, {
-                "type": "text",
-                // **!!! กรุณาแก้ไข: เลขบัญชีของคุณ !!!**
-                "text": "เลขบัญชี: [เลขบัญชี] (กรุณาแก้ไข)", 
-                "size": "sm",
-                "color": "#333333"
-              }, {
-                "type": "text",
-                // **!!! กรุณาแก้ไข: ชื่อบัญชีของคุณ !!!**
-                "text": "ชื่อบัญชี: [ชื่อบัญชี] (กรุณาแก้ไข)", 
-                "size": "sm",
-                "color": "#333333"
-              }, {
-                // แสดง QR Code 
-                "type": "text",
-                "text": "*** แทนที่ URL รูปภาพ QR Code ด้านล่างนี้ ***",
-                "wrap": true,
-                "color": "#FF0000",
-                "margin": "md"
-              }, {
-                "type": "image", 
-                // **!!! สำคัญ: แทนที่ URL นี้ด้วยรูป QR Code พร้อมเพย์/ธนาคารของคุณ !!!**
-                "url": "https://via.placeholder.com/500x500?text=YOUR+QR+CODE+IMAGE", 
-                "size": "full",
-                "aspectRatio": "1:1",
-                "aspectMode": "fit",
-                "margin": "lg"
-              }]
             }]
           },
           "footer": {
