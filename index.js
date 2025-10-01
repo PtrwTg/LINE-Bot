@@ -366,7 +366,7 @@ function handleEvent(event) {
               "height": "sm",
               "action": {
                 "type": "uri",
-    1             "label": "แชท LINE",
+                "label": "แชท LINE",
                 "uri": "https://line.me/ti/p/~mawzaz0002"
               }
             }, {
