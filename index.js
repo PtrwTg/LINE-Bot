@@ -80,7 +80,7 @@ const getProfileFlex = () => ({
             "layout": "vertical",
             "contents": [
                 { "type": "text", "text": "เสือ", "weight": "bold", "size": "xl" },
-                { "type": "text", "text": "นักศึกษาจบใหม่", "size": "sm", "color": "#666666" },
+                { "type": "text", "text": "software engineer", "size": "sm", "color": "#666666" },
                 { "type": "text", "text": "สาขาวิทยาการคอมพิวเตอร์", "size": "sm", "color": "#666666", "margin": "md" },
                 {
                     "type": "box", "layout": "baseline", "contents": [{ "type": "text", "text": "วันเกิด:", "size": "sm", "color": "#666666", "flex": 0 }, { "type": "text", "text": " 29/09/2544", "size": "sm", "color": "#666666", "flex": 0 }], "margin": "md"
