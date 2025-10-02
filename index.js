@@ -392,8 +392,8 @@ function handleEvent(event) {
       const scheduleImage = {
         type: 'image',
         // **ใช้รูปที่อัปโหลด (ต้องมี URL ที่เข้าถึงได้)**
-        originalContentUrl: 'https://i.postimg.cc/Qd9V1v2S/S-34897939-0.jpg', 
-        previewImageUrl: 'https://i.postimg.cc/Qd9V1v2S/S-34897939-0.jpg' 
+        originalContentUrl: 'https://i.postimg.cc/02c7V0Vt/1500.jpg', 
+        previewImageUrl: 'https://i.postimg.cc/02c7V0Vt/1500.jpg' 
       };
 
       // 2. ส่ง Flex Message พร้อมปุ่ม URI
