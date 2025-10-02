@@ -334,20 +334,12 @@ const getTicketSubMenu = () => ({
 const getDepartureTicket = () => ([
     {
         type: 'text',
-        text: `✈️ ตั๋วเครื่องบินขาไป (One-way)\n\n✅ วันที่: 6 ตุลาคม 2568 (จันทร์)\n✅ สายการบิน: Thai AirAsia (FD 3189)\n✅ เส้นทาง: นครศรีธรรมราช (NST) -> ดอนเมือง (DMK)\n✅ เวลาออกเดินทาง: 08:35 น.\n✅ ผู้โดยสาร: คุณถาวร ดวงมาก (19F) และ คุณยุวดี ดวงมาก (19E)\n\nกรุณาใช้รูปภาพด้านล่างเป็น Boarding Pass และเผื่อเวลาไปสนามบินก่อนเวลาบอร์ดดิ้ง (07:55 น.) ด้วยนะครับ/คะ!`,
-    },
-    {
-        type: 'text',
-        text: 'ตั๋วของคุณถาวร:',
+        text: `✈️ ตั๋วเครื่องบินขาไป (One-way)\n\n✅ วันที่: 6 ตุลาคม 2568 (จันทร์)\n✅ สายการบิน: Thai AirAsia (FD 3189)\n✅ เส้นทาง: นครศรีธรรมราช (NST) -> ดอนเมือง (DMK)\n✅ เวลาออกเดินทาง: 08:35 น.\n✅ ผู้โดยสาร: คุณถาวร ดวงมาก (19F) และ คุณยุวดา ดวงมาก (19E)\n\nกรุณาใช้รูปภาพด้านล่างเป็น Boarding Pass และเผื่อเวลาไปสนามบินก่อนเวลาบอร์ดดิ้ง (07:55 น.) ด้วยนะครับ/คะ!`,
     },
     {
         type: 'image',
         originalContentUrl: CONFIG.IMAGE_TICKET_DEPARTURE_THAWORN,
         previewImageUrl: CONFIG.IMAGE_TICKET_DEPARTURE_THAWORN,
-    },
-    {
-        type: 'text',
-        text: 'ตั๋วของคุณยุวดี:',
     },
     {
         type: 'image',
